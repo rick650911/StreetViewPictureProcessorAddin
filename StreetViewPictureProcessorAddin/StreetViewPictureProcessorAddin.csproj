@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\專案輸出\</OutputPath>
+    <OutputPath>..\..\專案輸出_StreetViewPictureProcessorAddin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -125,28 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="mdlProcessItem.cs" />
-    <Compile Include="x_btnLandUpdate.cs" />
-    <Compile Include="x_btnRasterize.cs" />
     <Compile Include="btnGpsCorrect.cs" />
-    <Compile Include="x_combox_DecimalPointDigitNum.cs" />
-    <Compile Include="x_EditBox_BufferSearchDistance.cs" />
-    <Compile Include="x_EditBox_BufferSearchTolerance.cs" />
-    <Compile Include="x_EditBox_AreaTolerance.cs" />
-    <Compile Include="x_EditBox_登記面積Field.cs" />
-    <Compile Include="x_EditBox_段號Field.cs" />
-    <Compile Include="x_enumTypeUpdateStatus.cs" />
     <Compile Include="IoUtility.cs" />
     <Compile Include="mdlTurnPoint.cs" />
     <Compile Include="Snippets.cs" />
-    <Compile Include="x_LandUpdateFunctiions.cs" />
-    <Compile Include="x_mdlLand.cs" />
-    <Compile Include="x_combox_fishnet_size.cs" />
-    <Compile Include="x_EditBox_WeightField.cs" />
     <Compile Include="GpTools.cs" />
-    <Compile Include="x_LandUpdateManager.cs" />
-    <Compile Include="x_RasterlizeManager.cs" />
     <Compile Include="btnStreeviewPicProcess.cs" />
-    <Compile Include="x_Module1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunPython.cs" />
     <Compile Include="StreetViewModule.cs" />
