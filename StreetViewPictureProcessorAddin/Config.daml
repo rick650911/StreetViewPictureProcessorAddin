@@ -1,0 +1,99 @@
+﻿<ArcGIS defaultAssembly="StreetViewPictureProcessorAddin.dll" defaultNamespace="StreetViewPictureProcessorAddin" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{A684406E-F912-496F-BEA1-47D5AFABB71B}" version="3.3" desktopVersion="2.8.29751"><!--2.8.29751-->
+    <Name>StreetViewPictureProcessorAddin</Name>
+    <Description>StreetViewPictureProcessorAddin description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Rickl</Author>
+    <Company>Acme</Company>
+    <Date>2021/5/24 下午 02:49:12</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="StreetViewPictureProcessorAddin_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <tab id="StreetViewPictureProcessorAddin_Tab1" caption="街景照片處理工具">
+          <group refID="StreetViewPictureProcessorAddin_Group1"/>
+        <!--<group refID="StreetViewPictureProcessorAddin_Group2"/>-->
+        </tab>
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="StreetViewPictureProcessorAddin_Group1" caption="街景照片處理工具" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <!--<comboBox refID="StreetViewPictureProcessorAddin_combox_fishnet_size" size="middle" />
+          <comboBox refID="StreetViewPictureProcessorAddin_combox_DecimalPointDigitNum" size="middle" />
+          <editBox refID="StreetViewPictureProcessorAddin_EditBox_WeightField" size="middle" />-->
+          <!--<button refID="StreetViewPictureProcessorAddin_btnRasterize" size="large" />-->
+          <button refID="StreetViewPictureProcessorAddin_btnStreeviewPicProcess" size="large" />
+          <button refID="StreetViewPictureProcessorAddin_btnGpsCorrect" size="large" />
+          <!--<button refID="StreetViewPictureProcessorAddin_RunPython" size="large" />-->
+        </group>
+        
+      </groups>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <!--<group id="StreetViewPictureProcessorAddin_Group2" caption="地籍升版工具" appearsOnAddInTab="true">
+          --><!-- host controls within groups --><!--
+          <editBox refID="StreetViewPictureProcessorAddin_EditBox_AreaTolerance" size="middle" />
+          <editBox refID="StreetViewPictureProcessorAddin_EditBox_BufferSearchTolerance" size="middle" />
+          <editBox refID="StreetViewPictureProcessorAddin_EditBox_BufferSearchDistance" size="middle" />
+          <editBox refID="StreetViewPictureProcessorAddin_EditBox_段號Field" size="middle" />
+          <editBox refID="StreetViewPictureProcessorAddin_EditBox_登記面積Field" size="middle" />
+          <button refID="StreetViewPictureProcessorAddin_btnLandUpdate" size="large" />
+          --><!--<button refID="StreetViewPictureProcessorAddin_RunPython" size="large" />--><!--
+        </group>-->
+        
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <!--<comboBox id="StreetViewPictureProcessorAddin_combox_fishnet_size" caption="網格大小(公尺)" className="combox_fishnet_size" isEditable="false" isReadOnly="true" itemWidth="70">
+          <tooltip heading="網格大小">
+            --><!--dfs/bfs:--><!--
+            <disabledText></disabledText>
+          </tooltip>
+        </comboBox>
+        <comboBox id="StreetViewPictureProcessorAddin_combox_DecimalPointDigitNum" caption="密度值小數位數" className="combox_DecimalPointDigitNum" isEditable="false" isReadOnly="true" itemWidth="70">
+          <tooltip heading="密度值小數位數">
+            --><!--dfs/bfs:--><!--
+            <disabledText></disabledText>
+          </tooltip>
+        </comboBox>
+        
+        <editBox id="StreetViewPictureProcessorAddin_EditBox_WeightField" caption="權重欄位" className="EditBox_WeightField" sizeString="AAAAAAAA"></editBox>
+        <button id="StreetViewPictureProcessorAddin_btnRasterize" caption="計算密度圖" className="btnRasterize" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>-->
+        <button id="StreetViewPictureProcessorAddin_btnStreeviewPicProcess" caption="街景照片處理" className="btnStreeviewPicProcess" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">
+            Tooltip text<disabledText />
+          </tooltip>
+        </button>
+        
+        <button id="StreetViewPictureProcessorAddin_btnGpsCorrect" caption="GPS修正" className="btnGpsCorrect" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">
+            Tooltip text<disabledText />
+          </tooltip>
+        </button>
+        
+        <!--<editBox id="StreetViewPictureProcessorAddin_EditBox_AreaTolerance" caption="面積差容忍值(比例)" className="EditBox_AreaTolerance" sizeString="AAAAAAAA"></editBox>
+        <editBox id="StreetViewPictureProcessorAddin_EditBox_BufferSearchTolerance" caption="Buffer搜尋容忍值(比例)" className="EditBox_BufferSearchTolerance" sizeString="AAAAAAAA"></editBox>
+        <editBox id="StreetViewPictureProcessorAddin_EditBox_BufferSearchDistance" caption="Buffer搜尋容忍值(公尺)" className="EditBox_BufferSearchDistance" sizeString="AAAAAAAA"></editBox>
+        <editBox id="StreetViewPictureProcessorAddin_EditBox_段號Field" caption="段號欄位(14碼)" className="EditBox_段號Field" sizeString="AAAAAAAA"></editBox>
+        <editBox id="StreetViewPictureProcessorAddin_EditBox_登記面積Field" caption="登記面積欄位(單位：平方公尺)" className="EditBox_登記面積Field" sizeString="AAAAAAAAAAAA"></editBox>
+        
+        <button id="StreetViewPictureProcessorAddin_btnLandUpdate" caption="地籍版次更新" className="btnLandUpdate" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">在選擇的第2個圖層中，尋找所選擇第1個圖層對應的地籍，輸出到result_圖層中，並記錄重劃、分割、合併等資訊<disabledText /></tooltip>
+        </button>-->
+      
+        <!--<button id="StreetViewPictureProcessorAddin_RunPython" caption="RunPython" className="RunPython" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>-->
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
